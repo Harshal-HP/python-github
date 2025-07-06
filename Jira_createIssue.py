@@ -11,6 +11,7 @@ app = Flask(__name__)
 def Jira_create_issue():
 
     userName = github_pull_issue()
+    print(userName)
     url = "https://harshalphadatare.atlassian.net/rest/api/3/issue"
 
     API_TOKEN = os.getenv("jira_pass")
