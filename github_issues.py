@@ -12,4 +12,4 @@ def github_pull_issue():
             userName['Name'] = data['user']['login'] 
             userName['Issue'] = data['title']
             print(data)
-    return userName
+#    return userName
