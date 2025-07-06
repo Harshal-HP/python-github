@@ -20,24 +20,35 @@ def Jira_create_issue():
     print(auth)
     print(userName['Name'])
     headers = {
-    "Accept": "application/json",
-    "Content-Type": "application/json"
+        "Accept": "application/json",
+        "Content-Type": "application/json"
     }
 
     payload = json.dumps( {
-    "fields": {
-        "project": {
-        "key": "HPD"
+        "fields": {
+        "description": {
+            "content": [
+                {
+                    "content": [
+                        {
+                            "text": "Order entry fails when selecting supplier.",
+                            "type": "text"
+                        }
+                    ],
+                    "type": "paragraph"
+                    }
+                ],
+            "type": "doc",
+             "version": 1
         },
-        "reporter": {
-        "id": userName['Name']
+        "project": {
+           "key": "HPD"
         },
         "issuetype": {
-        "id": "10000"
+            "id": "10006"
         },
-        "summary": userName['Issue'],
+        "summary": f"{userName["Issue"]}",
     },
-    
     "update": {}
     } )
 
