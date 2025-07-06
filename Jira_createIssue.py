@@ -1,9 +1,8 @@
-# This code sample uses the 'requests' library:
-# http://docs.python-requests.org
 import requests
 from requests.auth import HTTPBasicAuth
 import json
 from flask import Flask
+import os
 
 app = Flask(__name__)
 
@@ -13,8 +12,9 @@ def Jira_create_issue(userName):
     userName = github_pull_issue()
     url = "https://harshalphadatare.atlassian.net/rest/api/3/issue"
 
-    API_TOKEN = ""
-    auth = HTTPBasicAuth("", API_TOKEN)
+    API_TOKEN = os.getenv("jira_pass")
+    EMAIL = os.getenv("jira_email")
+    auth = HTTPBasicAuth(EMAIL, API_TOKEN)
 
     headers = {
     "Accept": "application/json",
