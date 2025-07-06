@@ -3,8 +3,6 @@ import requests
 response = requests.get(f"https://api.github.com/repos/Harshal-HP/python-github/issues")
 
 if response.status_code == 200:
-    print(response.json())
     response_data = response.json()
-    print(response_data)
     for data in response_data:
         print(data)
