@@ -7,7 +7,7 @@ from github_issues import github_pull_issue
 
 app = Flask(__name__)
 
-@app.route('/createIssue', methods=['POST'])
+@app.route('/createIssue')
 def Jira_create_issue():
 
     userName = github_pull_issue()
