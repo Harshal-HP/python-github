@@ -1,4 +1,5 @@
 import requests
+import json
 
 userName = {}
 
@@ -10,4 +11,4 @@ def github_pull_issue():
         for data in response_data:
             userName['Name'] = data['user']['login'] 
             userName['Issue'] = data['title']
-    return userName
+    return json.loads(userName)
