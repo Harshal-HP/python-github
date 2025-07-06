@@ -42,7 +42,7 @@ def Jira_create_issue():
              "version": 1
         },
         "project": {
-           "key": "HPD"
+           "key": "DEV"
         },
         "issuetype": {
             "id": "10006"
