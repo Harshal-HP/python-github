@@ -7,7 +7,7 @@ import os
 app = Flask(__name__)
 
 @app.route('/createIssue')
-def Jira_create_issue(userName):
+def Jira_create_issue():
 
     userName = github_pull_issue()
     url = "https://harshalphadatare.atlassian.net/rest/api/3/issue"
