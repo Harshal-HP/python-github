@@ -10,8 +10,8 @@ def github_pull_issue():
         response_data = response.json()
         for data in response_data:
             for mapData in data.items():
-                userName['number']['Name'] = mapData['user']['login'] 
-                userName['number']['Issue'] = mapData['title']
+                userName['Name'] = mapData['user']['login'] 
+                userName['Issue'] = mapData['title']
         print(userName)
 
 github_pull_issue()
