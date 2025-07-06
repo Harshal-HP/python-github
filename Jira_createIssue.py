@@ -33,8 +33,8 @@ def Jira_create_issue():
         "id": userName['Name']
         },
         "issuetype": {
-      "id": "10000"
-    }
+        "id": "10000"
+        },
         "summary": userName['Issue'],
     },
     
