@@ -3,6 +3,7 @@ from requests.auth import HTTPBasicAuth
 import json
 from flask import Flask
 import os
+from github_issues import github_pull_issue
 
 app = Flask(__name__)
 
