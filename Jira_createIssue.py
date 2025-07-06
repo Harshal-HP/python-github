@@ -35,6 +35,9 @@ def Jira_create_issue():
         "issuetype": {
         "id": "10000"
         },
+        "project": {
+        "id": "10000"
+        },
         "summary": userName['Issue'],
     },
     
