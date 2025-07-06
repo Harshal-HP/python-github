@@ -9,11 +9,9 @@ def github_pull_issue():
     if response.status_code == 200:
         response_data = response.json()
         for data in response_data:
-            for mapData in data.items():
-                # userName['Name'] = mapData['user']['login'] 
-                # userName['Issue'] = mapData['title']
-                print(mapData)
-        print(userName)
+            userName['Name'] = data['user']['login'] 
+            userName['Issue'] = data['title']
+        print(response_data)
 
 github_pull_issue()
 #    return userName
