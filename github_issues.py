@@ -11,5 +11,7 @@ def github_pull_issue():
         for data in response_data:
             userName['Name'] = data['user']['login'] 
             userName['Issue'] = data['title']
-            print(userName)
+        print(response_data)
+
+github_pull_issue()
 #    return userName
