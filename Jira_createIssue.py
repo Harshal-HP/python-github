@@ -27,13 +27,13 @@ def Jira_create_issue():
     payload = json.dumps( {
     "fields": {
         "project": {
-        "id": "HPD"
+        "key": "HPD"
         },
         "reporter": {
         "id": userName['Name']
         },
         "issuetype": {
-        "id": "10000"
+        "id": "10003"
         },
         "summary": userName['Issue'],
     },
