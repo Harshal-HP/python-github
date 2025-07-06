@@ -8,7 +8,7 @@ def github_pull_issue():
 
     if response.status_code == 200:
         response_data = response.json()
-        for data in response_data:
+        for data in response_data.items():
             userName['Name'] = data['user']['login'] 
             userName['Issue'] = data['title']
     return userName
