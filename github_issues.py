@@ -5,4 +5,4 @@ response = requests.get(f"https://api.github.com/repos/Harshal-HP/python-github/
 if response.status_code == 200:
     response_data = response.json()
     for data in response_data:
-        print(data.dumps())
+        print(data["login"], data["title"])
