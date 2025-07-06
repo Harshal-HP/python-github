@@ -17,7 +17,8 @@ def Jira_create_issue():
     API_TOKEN = os.getenv("jira_pass")
     EMAIL = os.getenv("jira_email")
     auth = HTTPBasicAuth(EMAIL, API_TOKEN)
-
+    print(auth)
+    print(userName['Name'])
     headers = {
     "Accept": "application/json",
     "Content-Type": "application/json"
