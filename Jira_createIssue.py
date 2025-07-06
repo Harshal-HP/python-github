@@ -29,9 +29,6 @@ def Jira_create_issue():
         "project": {
         "key": "HPD"
         },
-        "reporter": {
-        "id": userName['Name']
-        },
         "issuetype": {
         "id": "10003"
         },
